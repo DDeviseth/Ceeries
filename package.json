@@ -1,0 +1,8 @@
+{
+  "name": "ceeries-hydra-slay",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CEERIES Web Publishing and Digital Advertising final project",
+  "scripts": { "start": "node server.cjs", "check": "node --check server.cjs && node --check assets/app.js" },
+  "engines": { "node": ">=18" }
+}

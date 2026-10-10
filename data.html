@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#f5e8ed" />
+    <meta
+      name="description"
+      content="View the product and fictional customer datasets for the final project."
+    />
+    <title>Project data demo | CEERIES</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script src="assets/app.js" defer></script>
+  </head>
+  <body data-page="data">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="announcement">
+      A little something for every version of you. <a href="products.html">Meet Hydra Slay</a>
+    </div>
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="CEERIES home"
+        >CEE<span class="brand-r">R</span>IES<span class="wordmark-sub">HYDRA SLAY</span></a
+      ><button class="menu-button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+      <nav id="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a><a href="features.html">The formula</a
+        ><a href="products.html">Lip oils</a><a href="campaigns.html">The edit</a
+        ><a href="contact.html">Contact</a
+        ><a href="products.html#cart">Cart <span data-cart-count>0</span></a>
+      </nav>
+      <a class="header-action" href="index.html#gallery"
+        >Model gallery
+        <svg
+          class="icon-arrow"
+          aria-hidden="true"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 256 256"
+          fill="currentColor"
+        >
+          <path
+            d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"
+          /></svg
+      ></a>
+    </header>
+    <main id="main">
+      <section class="page-intro">
+        <h1>Project data<br /><em>in action.</em></h1>
+        <p>
+          A classroom demonstration of retrieving and displaying the two required datasets: products
+          and customer information.
+        </p>
+      </section>
+      <section class="section data-section">
+        <p class="form-note">
+          Customer records below are explicitly fictional demonstration data. Contact-form
+          submissions are kept separately and are not displayed publicly.
+        </p>
+        <div class="data-heading">
+          <h2>Products</h2>
+          <button class="button" id="refresh-data">Refresh datasets</button>
+        </div>
+        <p id="data-status" role="status">Loading datasets…</p>
+        <div class="table-wrap">
+          <table>
+            <caption>
+              Product dataset
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Product</th>
+                <th scope="col">Category</th>
+                <th scope="col">Tone</th>
+                <th scope="col">Price</th>
+                <th scope="col">Availability</th>
+              </tr>
+            </thead>
+            <tbody id="products-table"></tbody>
+          </table>
+        </div>
+        <h2>Demo customers</h2>
+        <div class="table-wrap">
+          <table>
+            <caption>
+              Fictional customer dataset
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Interest</th>
+              </tr>
+            </thead>
+            <tbody id="customers-table"></tbody>
+          </table>
+        </div>
+        <p class="small">
+          The local server supplies GET /api/products and GET /api/customers. Static hosting
+          retrieves the same supplied JSON datasets.
+        </p>
+      </section>
+    </main>
+    <section class="newsletter">
+      <div>
+        <h2>Good things, in your inbox.</h2>
+        <p>Discover the CEERIES collection and future beauty edits.</p>
+      </div>
+      <form id="newsletter-form">
+        <label for="newsletter-email">Email address</label>
+        <div class="input-action">
+          <input
+            id="newsletter-email"
+            type="email"
+            name="email"
+            placeholder="Your email address"
+            maxlength="254"
+            required
+            autocomplete="email"
+          /><button class="button" type="submit">Keep me posted</button>
+        </div>
+        <label class="consent"
+          ><input type="checkbox" name="consent" required /> I agree to save my email for this
+          student project. No automated emails are sent.</label
+        >
+        <p class="form-status" role="status" id="newsletter-status"></p>
+      </form>
+    </section>
+    <footer>
+      <div class="footer-main">
+        <div>
+          <a class="wordmark footer-logo" href="index.html">CEERIES</a>
+          <p>A little gloss goes a long way.</p>
+          <div class="social-links">
+            <a
+              href="https://www.instagram.com/ceeries.ph/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Instagram · @ceeries.ph</a
+            ><a
+              href="https://www.facebook.com/people/Ceeries/61576059574877/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Facebook · Ceeries</a
+            ><a href="https://www.tiktok.com/@riona.di" target="_blank" rel="noopener noreferrer"
+              >TikTok · @riona.di</a
+            >
+          </div>
+        </div>
+        <div>
+          <h2>Explore</h2>
+          <a href="index.html">Home</a><a href="features.html">The formula</a
+          ><a href="products.html">Lip oils</a><a href="campaigns.html">The edit</a
+          ><a href="contact.html">Contact</a
+          ><a href="products.html#cart">Cart <span data-cart-count>0</span></a>
+        </div>
+        <div>
+          <h2>Let’s talk</h2>
+          <p>San Fernando, Pampanga</p>
+          <a href="contact.html">Send a product inquiry</a
+          ><a href="features.html#faq">Frequently asked questions</a
+          ><a href="campaigns.html#email-preview">View the email edit</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>CEERIES · Web Publishing &amp; Digital Advertising student project</p>
+        <a href="data.html">Project data demo</a>
+      </div>
+    </footer>
+    <div class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

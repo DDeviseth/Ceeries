@@ -1,0 +1,3 @@
+Arrow-up-right icon from Phosphor Icons.
+Source: https://github.com/phosphor-icons/core
+License: MIT. Full license in LICENSE.txt.

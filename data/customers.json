@@ -1,0 +1,16 @@
+[
+  {
+    "id": "DEMO-001",
+    "name": "Demo beauty shopper",
+    "email": "beauty-shopper@example.invalid",
+    "interest": "Hydra Slay Lip Oil",
+    "status": "Illustrative inquiry"
+  },
+  {
+    "id": "DEMO-002",
+    "name": "Demo shade shopper",
+    "email": "shade-shopper@example.invalid",
+    "interest": "Queen Hydra Slay Lip Oil",
+    "status": "Illustrative inquiry"
+  }
+]
