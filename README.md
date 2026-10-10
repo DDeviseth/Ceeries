@@ -7,7 +7,7 @@ A complete Web Publishing and Digital Advertising student website built with pla
 1. Install Node.js 18 or newer if it is not already installed.
 2. Open a terminal in this folder.
 3. Run `npm start`.
-4. Visit `http://127.0.0.1:4173`.
+4. Visit `http://127.0.0.1:4173`
 
 The current workspace preview is running at that address. Each HTML file can be edited directly. `tools/build_pages.py` is an optional source-page generator; if used, it overwrites the six HTML files from its templates.
 
