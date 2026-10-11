@@ -1,82 +1,79 @@
-# CEERIES - Hydra Slay Lip Oil
+# CEERIES — Hydra Slay Lip Oil
 
-A complete Web Publishing and Digital Advertising student website built with plain HTML, CSS, and JavaScript. A small Node.js server supplies the local API and saves demonstration forms. No dependency installation is required to run the website.
+Web Publishing and Digital Advertising final project built with HTML, CSS, and JavaScript. Hydra Slay Lip Oil comes in seven shades at ₱199 each.
 
-## Open the website
+## Project links
 
-1. Install Node.js 18 or newer if it is not already installed.
-2. Open a terminal in this folder.
+- Website: https://sites-ceeries.vercel.app/
+- Public repository: https://github.com/DDeviseth/Ceeries
+- Final documentation: [CEERIES project documentation](documentation/CEERIES-project-documentation.pdf)
+
+## Run locally
+
+1. Install Node.js 18 or newer.
+2. Open this folder in VS Code and open its terminal.
 3. Run `npm start`.
-4. Visit `http://127.0.0.1:4173`.
+4. Open http://127.0.0.1:4173 in your browser.
 
-The current workspace preview is running at that address. Each HTML file can be edited directly. `tools/build_pages.py` is an optional source-page generator; if used, it overwrites the six HTML files from its templates.
+No external packages are required. Use the local server or the hosted website so the product and customer data can load correctly.
 
-## Included pages
+## Website pages
 
-| Page | Contents |
+| File | Contents |
 | --- | --- |
-| `index.html` | Hero, shade selector, founder/brand story, featured products, five supplied testimonials, formula preview, original promotional video, campaign promotion |
-| `features.html` | Hydration, non-sticky comfort, mirror-like shine, subtle tint, visuals, benefit infographic, all 13 supplied FAQs |
-| `products.html` | Seven supplied shades at PHP 199 each, search, inline details, product inquiry links |
-| `contact.html` | Name, email, subject, message, validation, saved inquiry confirmation, known location and Instagram |
-| `campaigns.html` | Social post mockup, copyable caption, campaign strategy, email mockup, original marketing PDF |
-| `data.html` | Products and explicitly fictional customer information retrieved and displayed |
+| `index.html` | Brand introduction, shade selector, featured products, model gallery, testimonials, and promotional video |
+| `features.html` | Hydration, non-sticky formula, mirror-like shine, subtle tint, and expandable FAQs |
+| `products.html` | Seven shades, product search, details, model gallery, and Add to cart |
+| `contact.html` | Contact information, social links, and a validated inquiry form |
+| `campaigns.html` | Social media and email campaign mockups |
+| `data.html` | Product and fictional customer datasets |
 
-## Working interactions
+## Main features
 
-- Shade selection updates image, name, selected state, and inquiry link.
-- Catalog search shows matching products and a useful empty state.
-- Testimonials have manual Previous/Next controls, and all FAQ answers can be expanded.
-- Product details open inline; inquiry links prefill the contact form.
-- Contact and newsletter forms validate and save data without sending emails.
-- Mobile navigation supports opening, closing, and Escape.
-- Original video plays with standard browser controls.
-- Motion uses native page-content transitions where supported, a CSS entry fallback, button press/arrow feedback, search and form focus feedback, FAQ answer transitions, a saved-form checkmark, manual testimonial transitions, shade changes, and selective scroll reveals. Links retain ordinary navigation behavior, and reduced-motion settings are honored.
-- Local fonts and optimized WebP images minimize external requests.
+- Responsive layouts and mobile navigation.
+- Product details and named shade/model photographs.
+- Cart quantities, item removal, and subtotals at ₱199 per item.
+- Cart persistence in the visitor’s browser and selection transfer to the contact form.
+- Gallery and testimonial navigation, expandable FAQs, and product search.
+- Page transitions and interaction animations with reduced-motion support.
+- Contact and newsletter form validation.
 
-## Data integration
+The cart is a classroom demonstration; it does not process payments or place orders. Campaign offers are promotional mockups rather than live discounts.
 
-`GET /api/products` reads `data/products.json`.
+## API and data integration
 
-`GET /api/customers` reads `data/customers.json`, containing fictional demonstration records only.
+When running `npm start`, the Node.js server provides:
 
-`POST /api/inquiries` validates and saves inquiries to `storage/inquiries.jsonl`.
+| Endpoint | Purpose |
+| --- | --- |
+| `GET /api/products` | Retrieves `data/products.json` |
+| `GET /api/customers` | Retrieves `data/customers.json`, containing fictional demonstration records |
+| `POST /api/inquiries` | Validates and saves inquiries locally to `storage/inquiries.jsonl` |
+| `POST /api/subscribe` | Validates and saves newsletter interest locally to `storage/subscriptions.jsonl` |
 
-`POST /api/subscribe` validates consent and saves newsletter interest to `storage/subscriptions.jsonl`.
+On static Vercel hosting, the website loads the JSON datasets directly when API requests are unavailable. Forms save in the visitor’s browser instead of the local server. They do not email CEERIES or create shared online submissions. The customer dataset is separate from saved inquiries.
 
-The preview server does not expose stored forms, source tools, or development context. On static hosting, GET requests fall back to the JSON datasets; forms save in the visitor's browser and clearly say so. Static hosting does not create shared submissions or deliver email. A production contact service is a separate deployment decision.
+## Source files and documentation
 
-## Facts your group must finish
+- Six HTML files contain the website pages.
+- `assets/` contains website CSS, JavaScript, images, video, fonts, and license notices.
+- `data/` contains the website datasets.
+- `server.cjs` and `package.json` support the local server and API demonstration.
+- `documentation/CEERIES-project-documentation.pdf` is the group’s final reviewed and formatted paper.
+- `documentation/original-email-marketing.pdf` contains the supplied email campaign mockup.
 
-- Official business email, telephone number, street address, and business hours.
-- Current stock and final discount terms/dates. Hydra Slay Lip Oil is confirmed at PHP 199 each.
-- Confirm member contributions in `documentation/group-contributions.md`.
-- Publish the final website, create the required public GitHub repository, and add their URLs to the documentation.
+Development configuration, generators, and testing tools are optional and are not required to run the submitted website.
 
-The original email PDF confirms San Fernando, Pampanga. Supplied campaign artwork includes a 20% promotional offer; the site labels it as a campaign preview rather than configuring a live discount. The site does not claim checkout, payment processing, or message delivery.
+## Group members
 
-## Documentation and assets
+Kenaz Brian Yanez, Almer Lalic, Sean Yambao, and Benedict Ong. Member contributions are documented in the final paper.
 
-`documentation/CEERIES-project-documentation.pdf` contains the requirement mapping, implementation details, verification summary, contribution worksheet, remaining submission tasks, and desktop/mobile screenshots. The contribution worksheet requires your group's actual assignments before final submission.
+## Social profiles
 
-`documentation/original-email-marketing.pdf` is your supplied email mockup.
+- Instagram: https://www.instagram.com/ceeries.ph/
+- Facebook: https://www.facebook.com/people/Ceeries/61576059574877/
+- TikTok: https://www.tiktok.com/@riona.di
 
-`assets/image-provenance.json` records the supplied source of each optimized image. Original assets are preserved in `LippieImages`, `ModelsForCeeries`, `GmailMarketing`, and `Pubmat IG Ad.png`.
+## Basic validation
 
-The downloadable source archive contains the optimized website assets and documentation, rather than duplicate large original photographs and video files. The original materials stay in this workspace and are excluded from Git by the supplied ignore file.
-
-The source video was converted to browser-friendly H.264/AAC MP4 without changing its content. Fonts are DM Sans and DM Serif Display from Google Fonts, self-hosted under `assets/fonts`; license notices are included there.
-
-## Validation
-
-Six pages were checked at desktop and phone widths for horizontal overflow and missing images. Shade selection, search, product details, contact prefill/saving, newsletter consent/saving, mobile menu, both GET endpoints, invalid-form rejection, private-file boundaries, and video metadata were verified in a browser. See `.impeccable/review/verification.json` for the results.
-
-Run `npm run check` for JavaScript syntax checks. The optional browser verification script in `tools/verify_site.cjs` uses this machine's bundled Playwright runtime.
-
-## Storefront update
-
-Featured product visuals now use equal columns. The original typography, navigation sizing, and section spacing have been restored. The brand story retains its new divider. The homepage includes seven supplied named shade/model photographs; the product gallery shows all seven named shades on lips. Product details pair the model look with the product image. Five concise FAQs show first, with the remaining topics behind Show more questions.
-
-Use Add to cart to save shades, change quantities, remove items, and see the product subtotal at ₱199 each. Inquire about my cart carries the selection into the contact form. This preview does not process payments or place orders. Cart saving is local to the visitor’s browser. Browser checks cover desktop, tablet, and phone widths, cart persistence and totals, gallery navigation, FAQ expansion, and invalid saved-cart recovery.
-
-Social profiles supplied by the user: Instagram https://www.instagram.com/ceeries.ph/, Facebook https://www.facebook.com/people/Ceeries/61576059574877/, and TikTok https://www.tiktok.com/@riona.di. Public product actions focus on details and Add to cart; the saved cart continues to the contact form.
+Run `npm run check` to check the syntax of the server and website JavaScript.
